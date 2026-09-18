@@ -1,0 +1,57 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "images/uploads"
+
+collections:
+  - name: "site"
+    label: "PIG Website Content"
+    files:
+      - name: "content"
+        label: "Site Content"
+        file: "content/site.json"
+        fields:
+          - label: "Mission Statement"
+            name: "mission"
+            widget: "object"
+            fields:
+              - { label: "Paragraph 1", name: "paragraph_1", widget: "text" }
+              - { label: "Paragraph 2", name: "paragraph_2", widget: "text" }
+
+          - label: "Board Members"
+            name: "board"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Photo", name: "photo", widget: "image" }
+
+          - label: "Upcoming Events"
+            name: "upcoming_events"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Date label (e.g. 'Date soon' or 'Dec 2026')", name: "date_label", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+          - label: "Recent Events"
+            name: "recent_events"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Day (e.g. '31')", name: "day", widget: "string", required: false }
+              - { label: "Month/Year label (e.g. 'Aug 2026')", name: "date_label", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+          - label: "Contact Info"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Instagram Handle", name: "instagram_handle", widget: "string" }
+              - { label: "Instagram URL", name: "instagram_url", widget: "string" }
+              - { label: "Phone 1", name: "phone_1", widget: "string" }
+              - { label: "Phone 2", name: "phone_2", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
