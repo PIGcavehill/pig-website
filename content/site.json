@@ -1,23 +1,64 @@
 {
   "mission": {
-    "paragraph_1": "The Paediatric Interest Group (PIG) is a student-led organisation dedicated to fostering interest and excellence in paediatric medicine among medical students. We bridge the gap between theoretical knowledge and clinical practice through hands-on training, educational workshops, and community outreach focused on child health.",
+    "paragraph_1": "The Paediatric Interest Group (PIG) is a student-led organisation dedicated to fostering interest and excellence in paediatric medicine among medical students. We bridge the gap between theoretical knowledge and clinical practice through hands-on training, educational workshops, and community outreach focused on child health. this is a test",
     "paragraph_2": "PIG equips students with essential clinical skills, promotes patient-centred paediatric care, and creates opportunities for leadership, mentorship, and professional development — preparing students for clinical clerkships while making a meaningful impact in the community."
   },
   "board": [
-    { "name": "Rebecca Lezama", "role": "President", "photo": "images/board/rebecca.png" },
-    { "name": "Natalie Lewis", "role": "Vice President", "photo": "images/board/natalie.png" },
-    { "name": "Abigail Jenoure", "role": "Secretary", "photo": "images/board/abigail.png" },
-    { "name": "Xade Blades", "role": "Treasurer", "photo": "images/board/xade.png" },
-    { "name": "Sarai Gaskin", "role": "Events Officer", "photo": "images/board/sarai.png" },
-    { "name": "Anushka George", "role": "Education Liaison Chair", "photo": "images/board/anushka.png" },
-    { "name": "Makayla Lawrence", "role": "Early Childhood Medicine Chair", "photo": "images/board/makayla.png" }
+    {
+      "name": "Rebecca Lezama",
+      "role": "President",
+      "photo": "images/board/rebecca.png"
+    },
+    {
+      "name": "Natalie Lewis",
+      "role": "Vice President",
+      "photo": "images/board/natalie.png"
+    },
+    {
+      "name": "Abigail Jenoure",
+      "role": "Secretary",
+      "photo": "images/board/abigail.png"
+    },
+    {
+      "name": "Xade Blades",
+      "role": "Treasurer",
+      "photo": "images/board/xade.png"
+    },
+    {
+      "name": "Sarai Gaskin",
+      "role": "Events Officer",
+      "photo": "images/board/sarai.png"
+    },
+    {
+      "name": "Anushka George",
+      "role": "Education Liaison Chair",
+      "photo": "images/board/anushka.png"
+    },
+    {
+      "name": "Makayla Lawrence",
+      "role": "Early Childhood Medicine Chair",
+      "photo": "images/board/makayla.png"
+    }
   ],
   "upcoming_events": [
-    { "title": "Christmas Toy Drive", "date_label": "Date soon", "description": "Collecting toys to bring some holiday cheer to children in the community. Date to be confirmed — follow @pigcavehill for updates." },
-    { "title": "Polyclinic Food Drive", "date_label": "Date soon", "description": "A food drive supporting families at the polyclinic. Date to be confirmed — follow @pigcavehill for updates." }
+    {
+      "title": "Christmas Toy Drive",
+      "date_label": "Date soon",
+      "description": "Collecting toys to bring some holiday cheer to children in the community. Date to be confirmed — follow @pigcavehill for updates."
+    },
+    {
+      "title": "Polyclinic Food Drive",
+      "date_label": "Date soon",
+      "description": "A food drive supporting families at the polyclinic. Date to be confirmed — follow @pigcavehill for updates."
+    }
   ],
   "recent_events": [
-    { "title": "PIG Phlebotomy Workshop", "date_label": "Aug 2026", "day": "31", "description": "A hands-on session giving members practical experience with blood draw technique — one of PIG's core clinical skills workshops." }
+    {
+      "title": "PIG Phlebotomy Workshop",
+      "date_label": "Aug 2026",
+      "day": "31",
+      "description": "A hands-on session giving members practical experience with blood draw technique — one of PIG's core clinical skills workshops."
+    }
   ],
   "contact": {
     "email": "pigcavehill@gmail.com",
