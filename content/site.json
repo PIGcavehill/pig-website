@@ -5,6 +5,11 @@
   },
   "board": [
     {
+      "name": "Dr. Michele Lashley ",
+      "role": "Patron Paediatric Consultant",
+      "photo": "images/uploads/dsc_7461.jpg.png"
+    },
+    {
       "name": "Rebecca Lezama",
       "role": "President",
       "photo": "images/board/rebecca.png"
