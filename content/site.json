@@ -133,5 +133,39 @@
       "day": "31",
       "description": "Coordinators involved: Mrs. Ward, Mrs. Hall, Ms. Bell, Ms. Mascoll.                                              \n\n\nA hands-on session giving members practical experience with blood draw technique. Building confidence through clinical skills practice."
     }
+  ],
+  "initiative_details": [
+    {
+      "title": "A day in the life of a Paediatrician Programme",
+      "description": "Shadow a Paediatrician for a day and see what Paediatrics is really all about. Exclusively available to paid members. ",
+      "details": "Learn more about this initiative, eligibility, how the programme works, and upcoming opportunities.",
+      "image": "",
+      "button_text": "",
+      "button_link": ""
+    },
+    {
+      "title": "Educational Opportunities",
+      "description": "Workshops, seminars, and skills sessions led by the island's leading clinicians and academics. ",
+      "details": "Explore our seminars, workshops and clinical skills sessions designed to support medical students throughout their training.",
+      "image": "",
+      "button_text": "",
+      "button_link": ""
+    },
+    {
+      "title": "Paediatric Outreach ",
+      "description": "Join us as we partner with the Living Waters Community for donation drives to children in need",
+      "details": "Learn more about our community partnerships, donation drives and opportunities to support children and families in need.",
+      "image": "",
+      "button_text": "",
+      "button_link": ""
+    },
+    {
+      "title": "Childcare Advocacy",
+      "description": "Promoting the health, safety, and well-being of children through education, awareness, and community outreach. We aim to empower future physicians to become strong advocates for every child.",
+      "details": "Learn more about our child-health advocacy, education and community outreach activities.",
+      "image": "",
+      "button_text": "",
+      "button_link": ""
+    }
   ]
 }
