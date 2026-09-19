@@ -19,7 +19,7 @@
     --ink: #2A1A24;
     --ink-soft: #6b5460;
     --line: #EBD3E1;
-    --radius: 3px;
+    --radius: 14px;
   }
   *{box-sizing:border-box;}
   html{scroll-behavior:smooth;}
@@ -86,6 +86,7 @@
   .hero-art{position:relative;display:flex;justify-content:center;}
   .hero-logo-frame{position:relative;width:78%;max-width:340px;aspect-ratio:1/1;border-radius:50%;background:#F8E3EE;display:flex;align-items:center;justify-content:center;padding:36px;}
   .hero-logo-frame::before{content:"";position:absolute;inset:-14px;border-radius:50%;border:1.5px dashed var(--amber);opacity:.55;}
+  .hero-logo-frame::after{content:"✦  ♡  ✦";position:absolute;right:-28px;top:8px;color:var(--magenta);font-family:'Fraunces',serif;font-size:1.25rem;letter-spacing:8px;transform:rotate(10deg);}
   .hero-logo-frame img{width:100%;height:100%;object-fit:contain;}
 
   section{padding:86px 0;}
@@ -100,13 +101,16 @@
   .mission-text p{margin:0 0 18px;color:var(--ink);}
   .pig-full{font-size:0.82rem;letter-spacing:.03em;color:var(--ink-soft);border-left:2px solid var(--amber);padding-left:14px;margin-top:26px;}
   .initiatives{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-  .init-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px 16px;}
+  .init-card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 18px;box-shadow:0 8px 24px rgba(78,15,56,.05);transition:transform .18s ease,box-shadow .18s ease;}
+  .init-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(78,15,56,.10);}
+  .init-card::after{content:"✦";position:absolute;right:14px;top:10px;color:var(--amber);font-size:.8rem;opacity:.75;}
+  .init-icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--blush-2);color:var(--magenta);font-size:1.15rem;margin-bottom:12px;border:1px solid var(--line);}
   .init-card .ic{width:30px;height:30px;margin-bottom:10px;color:var(--magenta);}
   .init-card h3{font-family:'Inter',sans-serif;font-size:0.92rem;font-weight:700;color:var(--plum);margin-bottom:4px;}
   .init-card p{font-size:0.83rem;color:var(--ink-soft);margin:0;}
 
   .board-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px;}
-  .board-card{background:#fff;border:1px solid var(--line);padding:26px 22px;border-radius:var(--radius);}
+  .board-card{background:#fff;border:1px solid var(--line);padding:26px 22px;border-radius:18px;box-shadow:0 7px 22px rgba(78,15,56,.045);}
   .board-photo{width:76px;height:76px;border-radius:50%;object-fit:cover;background:var(--blush-2);display:block;margin-bottom:16px;border:1px solid var(--line);}
   .board-card h3{font-size:1.08rem;}
   .board-role{color:var(--magenta-deep);font-weight:600;font-size:0.85rem;margin-top:2px;}
@@ -129,7 +133,8 @@
 
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
   @media (max-width:780px){.steps{grid-template-columns:1fr;}}
-  .step-card{background:#fff;border-radius:var(--radius);padding:28px 24px;border-top:3px solid var(--magenta);}
+  .step-card{position:relative;background:#fff;border-radius:18px;padding:28px 24px;border:1px solid var(--line);border-top:3px solid var(--magenta);box-shadow:0 7px 22px rgba(78,15,56,.045);}
+  .step-card::after{content:"♡";position:absolute;right:18px;top:15px;color:var(--amber);font-size:1.1rem;}
   .step-mark{font-family:'Fraunces',serif;font-style:italic;color:var(--amber);font-size:1.6rem;margin-bottom:12px;display:block;}
   .step-card h3{font-size:1.05rem;margin-bottom:8px;}
   .step-card p{color:var(--ink-soft);font-size:0.92rem;margin:0;}
@@ -358,7 +363,10 @@
       const hs = document.getElementById('heroSecondary');
       if (h.secondary_button_text) hs.textContent = h.secondary_button_text;
       if (h.secondary_button_link) hs.href = h.secondary_button_link;
-      if (data.initiatives) document.getElementById('initiativesGrid').innerHTML = data.initiatives.map((item) => '<div class="init-card"><h3>'+esc(item.title)+'</h3><p>'+esc(item.description)+'</p></div>').join('');
+      if (data.initiatives) {
+        const cuteIcons = ['✚','♡','☻','✎'];
+        document.getElementById('initiativesGrid').innerHTML = data.initiatives.map((item,i) => '<div class="init-card"><div class="init-icon" aria-hidden="true">'+cuteIcons[i % cuteIcons.length]+'</div><h3>'+esc(item.title)+'</h3><p>'+esc(item.description)+'</p></div>').join('');
+      }
       if (data.board_intro) document.getElementById('boardIntro').textContent = data.board_intro;
       const gi = data.get_involved || {};
       if (gi.steps) document.getElementById('involvedSteps').innerHTML = gi.steps.map((item,i) => '<div class="step-card"><span class="step-mark">'+(i+1)+'.</span><h3>'+esc(item.title)+'</h3><p>'+esc(item.description)+'</p></div>').join('');
