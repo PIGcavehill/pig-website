@@ -103,6 +103,9 @@
   .initiatives{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
   .init-card{position:relative;overflow:hidden;background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 18px;box-shadow:0 8px 24px rgba(78,15,56,.05);transition:transform .18s ease,box-shadow .18s ease;}
   .init-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(78,15,56,.10);}
+  .init-card{cursor:pointer;}
+  .init-card:focus{outline:3px solid rgba(194,26,120,.22);outline-offset:3px;}
+  .init-more{display:inline-block;margin-top:12px;color:var(--magenta-deep);font-size:.8rem;font-weight:700;letter-spacing:.02em;}
   .init-card::after{content:"✦";position:absolute;right:14px;top:10px;color:var(--amber);font-size:.8rem;opacity:.75;}
   .init-icon{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--blush-2);color:var(--magenta);font-size:1.15rem;margin-bottom:12px;border:1px solid var(--line);}
   .init-card .ic{width:30px;height:30px;margin-bottom:10px;color:var(--magenta);}
@@ -130,6 +133,16 @@
   .event-tag{display:inline-block;font-size:0.74rem;font-weight:700;letter-spacing:.03em;color:#fff;background:var(--amber);padding:3px 10px;border-radius:20px;}
   .event-tag.past{background:var(--ink-soft);}
   .events-note{margin-top:26px;font-size:0.88rem;color:var(--ink-soft);}
+  .initiative-detail-grid{display:flex;flex-direction:column;gap:28px;}
+  .initiative-detail{scroll-margin-top:90px;display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:22px;padding:34px;box-shadow:0 10px 30px rgba(78,15,56,.055);position:relative;overflow:hidden;}
+  .initiative-detail:nth-child(even){background:var(--blush);}
+  .initiative-detail::after{content:"✦";position:absolute;right:20px;top:14px;color:var(--amber);font-size:1rem;}
+  .initiative-detail h3{font-size:1.55rem;margin-bottom:10px;}
+  .initiative-detail p{color:var(--ink-soft);margin:0 0 12px;white-space:pre-line;}
+  .initiative-detail-media{min-height:210px;border-radius:18px;background:linear-gradient(145deg,var(--blush-2),#fff);display:flex;align-items:center;justify-content:center;overflow:hidden;border:1px solid var(--line);}
+  .initiative-detail-media img{width:100%;height:100%;min-height:210px;object-fit:cover;}
+  .initiative-detail-placeholder{font-family:'Fraunces',serif;color:var(--magenta);font-size:3.2rem;}
+  @media(max-width:760px){.initiative-detail{grid-template-columns:1fr;padding:25px}.initiative-detail-media{min-height:170px}}
 
   .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
   @media (max-width:780px){.steps{grid-template-columns:1fr;}}
@@ -269,7 +282,19 @@
   </div>
 </section>
 
-<section id="involved" class="alt">
+
+<section id="initiatives-detail" class="alt">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow-line"><span class="rule"></span><span>What we do</span></div>
+      <h2>Our initiatives</h2>
+      <p>Take a closer look at the programmes, opportunities and outreach that make up PIG.</p>
+    </div>
+    <div class="initiative-detail-grid" id="initiativeDetailGrid"></div>
+  </div>
+</section>
+
+<section id="involved">
   <div class="wrap">
     <div class="head">
       <div class="eyebrow-line"><span class="rule"></span><span>Join us</span></div>
@@ -365,7 +390,12 @@
       if (h.secondary_button_link) hs.href = h.secondary_button_link;
       if (data.initiatives) {
         const cuteIcons = ['✚','♡','☻','✎'];
-        document.getElementById('initiativesGrid').innerHTML = data.initiatives.map((item,i) => '<div class="init-card"><div class="init-icon" aria-hidden="true">'+cuteIcons[i % cuteIcons.length]+'</div><h3>'+esc(item.title)+'</h3><p>'+esc(item.description)+'</p></div>').join('');
+        document.getElementById('initiativesGrid').innerHTML = data.initiatives.map((item,i) => '<div class="init-card" role="link" tabindex="0" data-initiative="'+i+'"><div class="init-icon" aria-hidden="true">'+cuteIcons[i % cuteIcons.length]+'</div><h3>'+esc(item.title)+'</h3><p>'+esc(item.description)+'</p><span class="init-more">Learn more ↓</span></div>').join('');
+        document.querySelectorAll('.init-card[data-initiative]').forEach(card => {
+          const go = () => document.getElementById('initiative-'+card.dataset.initiative)?.scrollIntoView({behavior:'smooth',block:'start'});
+          card.addEventListener('click', go);
+          card.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){e.preventDefault();go();} });
+        });
       }
       if (data.board_intro) document.getElementById('boardIntro').textContent = data.board_intro;
       const gi = data.get_involved || {};
@@ -380,6 +410,15 @@
         <p>${esc(m.paragraph_2)}</p>
         <p class="pig-full">Learn. Connect. Inspire. Change lives.</p>
       `;
+
+      // Initiative details
+      const detailGrid = document.getElementById('initiativeDetailGrid');
+      const details = data.initiative_details || [];
+      detailGrid.innerHTML = details.map((item,i) => {
+        const media = item.image ? '<img src="'+esc(item.image)+'" alt="'+esc(item.title)+'">' : '<span class="initiative-detail-placeholder">'+['✚','♡','☻','✎'][i%4]+'</span>';
+        const button = item.button_text && item.button_link ? '<a class="btn btn-primary" href="'+esc(item.button_link)+'">'+esc(item.button_text)+'</a>' : '';
+        return '<article class="initiative-detail" id="initiative-'+i+'"><div><h3>'+esc(item.title)+'</h3><p><strong>'+esc(item.description)+'</strong></p><p>'+esc(item.details)+'</p>'+button+'</div><div class="initiative-detail-media">'+media+'</div></article>';
+      }).join('');
 
       // Board
       const boardGrid = document.getElementById('boardGrid');
