@@ -13,6 +13,48 @@ collections:
         label: "Site Content"
         file: "content/site.json"
         fields:
+          - label: "Homepage Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Top Label", name: "eyebrow", widget: "string" }
+              - { label: "Main Headline", name: "headline", widget: "string" }
+              - { label: "Intro Text", name: "lead", widget: "text" }
+              - { label: "Primary Button Text", name: "primary_button_text", widget: "string" }
+              - { label: "Primary Button Link", name: "primary_button_link", widget: "string" }
+              - { label: "Secondary Button Text", name: "secondary_button_text", widget: "string" }
+              - { label: "Secondary Button Link", name: "secondary_button_link", widget: "string" }
+
+          - label: "About Initiative Cards"
+            name: "initiatives"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+
+          - { label: "Board Introduction", name: "board_intro", widget: "text" }
+
+          - label: "Get Involved"
+            name: "get_involved"
+            widget: "object"
+            fields:
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+              - { label: "Who Can Join Heading", name: "who_title", widget: "string" }
+              - { label: "Who Can Join Text", name: "who_text", widget: "text" }
+              - { label: "Button Text", name: "button_text", widget: "string" }
+              - { label: "Button Link", name: "button_link", widget: "string" }
+
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Slogan", name: "slogan", widget: "string" }
+
           - label: "Mission Statement"
             name: "mission"
             widget: "object"
