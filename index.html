@@ -181,12 +181,12 @@
 <section class="hero">
   <div class="wrap">
     <div>
-      <div class="eyebrow-line"><span class="rule"></span><span>UWI Cave Hill Medical Students</span></div>
-      <h1>The future of healthcare starts with compassion.</h1>
-      <p class="lead">The Paediatric Interest Group (PIG) is a student-led community at UWI Cave Hill building clinical skill and heart for child health — through hands-on training, workshops, and outreach that puts children first.</p>
+      <div class="eyebrow-line"><span class="rule"></span><span id="heroEyebrow">UWI Cave Hill Medical Students</span></div>
+      <h1 id="heroHeadline">The future of healthcare starts with compassion.</h1>
+      <p class="lead" id="heroLead">The Paediatric Interest Group (PIG) is a student-led community at UWI Cave Hill building clinical skill and heart for child health — through hands-on training, workshops, and outreach that puts children first.</p>
       <div class="hero-cta">
-        <a href="#involved" class="btn btn-primary">Join PIG</a>
-        <a href="#events" class="btn btn-ghost">See upcoming events</a>
+        <a href="#involved" class="btn btn-primary" id="heroPrimary">Join PIG</a>
+        <a href="#events" class="btn btn-ghost" id="heroSecondary">See upcoming events</a>
       </div>
     </div>
     <div class="hero-art">
@@ -207,7 +207,7 @@
       <div class="mission-text" id="missionText">
         <!-- filled by JS -->
       </div>
-      <div class="initiatives">
+      <div class="initiatives" id="initiativesGrid">
         <div class="init-card">
           <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
           <h3>Diabetes Camp</h3>
@@ -238,7 +238,7 @@
     <div class="head">
       <div class="eyebrow-line"><span class="rule"></span><span>Leadership</span></div>
       <h2>Meet our board</h2>
-      <p>The 2026–2027 executive leading PIG this academic year.</p>
+      <p id="boardIntro">The 2026–2027 executive leading PIG this academic year.</p>
     </div>
     <div class="board-grid" id="boardGrid">
       <!-- filled by JS -->
@@ -270,7 +270,7 @@
       <div class="eyebrow-line"><span class="rule"></span><span>Join us</span></div>
       <h2>How to get involved</h2>
     </div>
-    <div class="steps">
+    <div class="steps" id="involvedSteps">
       <div class="step-card">
         <span class="step-mark">i.</span>
         <h3>Follow & sign up</h3>
@@ -287,7 +287,7 @@
         <p>Volunteer at outreach events or step into a leadership role on the executive board.</p>
       </div>
     </div>
-    <div class="who-strip">
+    <div class="who-strip" id="whoStrip">
       <div>
         <h3>Who can join?</h3>
         <p>All new medical students at UWI Cave Hill — no experience needed, just a big heart and a willingness to learn.</p>
@@ -318,7 +318,7 @@
 
 <footer>
   <div class="wrap">
-    <div class="brand-text">Paediatric Interest Group<br><span class="fmeta">UWI Cave Hill · Together, we care. Together, we inspire.</span></div>
+    <div class="brand-text">Paediatric Interest Group<br><span class="fmeta">UWI Cave Hill · <span id="footerSlogan">Together, we care. Together, we inspire.</span></span></div>
     <div class="fmeta" id="footerEmail"></div>
   </div>
 </footer>
@@ -347,6 +347,24 @@
   fetch('content/site.json?_=' + Date.now())
     .then(r => r.json())
     .then(data => {
+      // Editable homepage sections
+      const h = data.hero || {};
+      if (h.eyebrow) document.getElementById('heroEyebrow').textContent = h.eyebrow;
+      if (h.headline) document.getElementById('heroHeadline').textContent = h.headline;
+      if (h.lead) document.getElementById('heroLead').textContent = h.lead;
+      const hp = document.getElementById('heroPrimary');
+      if (h.primary_button_text) hp.textContent = h.primary_button_text;
+      if (h.primary_button_link) hp.href = h.primary_button_link;
+      const hs = document.getElementById('heroSecondary');
+      if (h.secondary_button_text) hs.textContent = h.secondary_button_text;
+      if (h.secondary_button_link) hs.href = h.secondary_button_link;
+      if (data.initiatives) document.getElementById('initiativesGrid').innerHTML = data.initiatives.map((item) => '<div class="init-card"><h3>'+esc(item.title)+'</h3><p>'+esc(item.description)+'</p></div>').join('');
+      if (data.board_intro) document.getElementById('boardIntro').textContent = data.board_intro;
+      const gi = data.get_involved || {};
+      if (gi.steps) document.getElementById('involvedSteps').innerHTML = gi.steps.map((item,i) => '<div class="step-card"><span class="step-mark">'+(i+1)+'.</span><h3>'+esc(item.title)+'</h3><p>'+esc(item.description)+'</p></div>').join('');
+      if (gi.who_title || gi.who_text) document.getElementById('whoStrip').innerHTML = '<div><h3>'+esc(gi.who_title||'Who can join?')+'</h3><p>'+esc(gi.who_text||'')+'</p></div><a href="'+esc(gi.button_link||'#contact')+'" class="btn btn-primary">'+esc(gi.button_text||'Sign up today')+'</a>';
+      if (data.footer && data.footer.slogan) document.getElementById('footerSlogan').textContent = data.footer.slogan;
+
       // Mission
       const m = data.mission || {};
       document.getElementById('missionText').innerHTML = `
