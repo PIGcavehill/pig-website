@@ -1,65 +1,70 @@
 {
   "mission": {
     "paragraph_1": "The Paediatric Interest Group (PIG) is a student-led organisation dedicated to fostering interest and excellence in paediatric medicine among medical students. We bridge the gap between theoretical knowledge and clinical practice through hands-on training, educational workshops, and community outreach focused on child health.",
-    "paragraph_2": "PIG equips students with essential clinical skills, promotes patient-centred paediatric care, and creates opportunities for leadership, mentorship, and professional development — preparing students for clinical clerkships while making a meaningful impact in the community."
+    "paragraph_2": "PIG equips students with essential clinical skills, promotes patient-centred paediatric care, and creates opportunities for leadership, mentorship, and professional development; preparing students for clinical clerkships while making a meaningful impact in the community."
   },
   "board": [
     {
       "name": "Dr. Michele Lashley ",
-      "role": "Patron Paediatric Consultant",
+      "role": "Patron Paediatric Consultant- Senior Lecturer in Child Health",
       "photo": "images/uploads/dsc_7461.jpg.png"
     },
     {
       "name": "Rebecca Lezama",
-      "role": "President",
+      "role": "President (MS-3)",
       "photo": "images/board/rebecca.png"
     },
     {
       "name": "Natalie Lewis",
-      "role": "Vice President",
+      "role": "Vice President (MS-3)",
       "photo": "images/board/natalie.png"
     },
     {
       "name": "Abigail Jenoure",
-      "role": "Secretary",
+      "role": "Secretary (MS-2)",
       "photo": "images/board/abigail.png"
     },
     {
       "name": "Xade Blades",
-      "role": "Treasurer",
+      "role": "Treasurer (MS-4)",
       "photo": "images/board/xade.png"
     },
     {
-      "name": "Sarai Gaskin",
-      "role": "Events Officer",
-      "photo": "images/board/sarai.png"
+      "name": "Milán Walrond",
+      "role": "Public Relations Officer (MS-3)",
+      "photo": "images/uploads/whatsapp-image-2026-09-04-at-08.53.21.jpeg"
     },
     {
       "name": "Anushka George",
-      "role": "Education Liaison Chair",
+      "role": "Education Liaison Chair (MS-3)",
       "photo": "images/board/anushka.png"
     },
     {
       "name": "Makayla Lawrence",
-      "role": "Early Childhood Medicine Chair",
+      "role": "Early Childhood Medicine Chair (MS-3)",
       "photo": "images/board/makayla.png"
     },
     {
-      "name": "Milán Walrond",
-      "role": "Public Relations Officer",
-      "photo": "images/uploads/whatsapp-image-2026-09-04-at-08.53.21.jpeg"
+      "name": "Sarai Gaskin",
+      "role": "Events Officer (MS-2)",
+      "photo": "images/board/sarai.png"
     }
   ],
   "upcoming_events": [
     {
-      "title": "Christmas Toy Drive",
+      "title": "Immunization Schedule Seminar",
       "date_label": "Date soon",
-      "description": "Collecting toys to bring some holiday cheer to children in the community. Date to be confirmed — follow @pigcavehill for updates."
+      "description": "Starting junior clerkship soon? \nJoin us for an interactive seminar designed to help you confidently navigate the childhood immunization schedule and apply it in a clinical setting. \n\nMore details coming soon, follow @pigcavehill for updates.\n\nNB. Discount benefit for paid members "
+    },
+    {
+      "title": "Vital Signs Workshop",
+      "date_label": "Date Soon",
+      "description": "Think you know your vital signs? Paediatrics changes the rules! \n\nJoin us for an interactive workshop where you’ll learn how to measure and interpret key vital signs, understand how normal ranges change with age, and recognize when a reading should raise concern.\n\nMore details coming soon, follow @pigcavehill for updates.\n\nNB. Discount benefit for paid members "
     },
     {
       "title": "Polyclinic Food Drive",
       "date_label": "Date soon",
-      "description": "A food drive supporting families at the polyclinic. Date to be confirmed — follow @pigcavehill for updates."
+      "description": "A food drive supporting families at the polyclinic. \n\nMore details coming soon, follow @pigcavehill for updates."
     }
   ],
   "recent_events": [
@@ -67,7 +72,7 @@
       "title": "PIG Phlebotomy Workshop",
       "date_label": "Aug 2026",
       "day": "31",
-      "description": "A hands-on session giving members practical experience with blood draw technique — one of PIG's core clinical skills workshops."
+      "description": "Coordinators involved: Mrs. Ward, Mrs. Hall, Ms. Bell, Ms. Mascoll\n\nA hands-on session giving members practical experience with blood draw technique. Building confidence through clinical skills practice."
     }
   ],
   "contact": {
