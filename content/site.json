@@ -82,5 +82,56 @@
     "phone_1": "1 (868) 709-5936",
     "phone_2": "1 (868) 491-0420",
     "location": "The University of the West Indies, Cave Hill Campus, Barbados"
+  },
+  "hero": {
+    "eyebrow": "UWI Cave Hill Medical Students",
+    "headline": "The future of healthcare starts with compassion.",
+    "lead": "The Paediatric Interest Group (PIG) is a student-led community at UWI Cave Hill building clinical skill and heart for child health — through hands-on training, workshops, and outreach that puts children first.",
+    "primary_button_text": "Join PIG",
+    "primary_button_link": "#involved",
+    "secondary_button_text": "See upcoming events",
+    "secondary_button_link": "#events"
+  },
+  "initiatives": [
+    {
+      "title": "Diabetes Camp",
+      "description": "Educating and empowering children living with diabetes through fun, learning, and community."
+    },
+    {
+      "title": "Neonatal Outreach",
+      "description": "Supporting newborns and their families through education, resources, and care."
+    },
+    {
+      "title": "Mental Health Matters",
+      "description": "Promoting mental well-being in children and teens through awareness and advocacy."
+    },
+    {
+      "title": "Paediatric Education",
+      "description": "Workshops, case discussions, and skills sessions to grow your knowledge and confidence."
+    }
+  ],
+  "board_intro": "The 2026–2027 executive leading PIG this academic year.",
+  "get_involved": {
+    "steps": [
+      {
+        "title": "Follow & sign up",
+        "description": "Follow @pigcavehill on Instagram and fill out our sign-up form to join the mailing list."
+      },
+      {
+        "title": "Attend a session",
+        "description": "Come to a workshop, camp, or outreach event — no paediatrics experience required."
+      },
+      {
+        "title": "Get involved further",
+        "description": "Volunteer at outreach events or step into a leadership role on the executive board."
+      }
+    ],
+    "who_title": "Who can join?",
+    "who_text": "All new medical students at UWI Cave Hill — no experience needed, just a big heart and a willingness to learn.",
+    "button_text": "Sign up today",
+    "button_link": "#contact"
+  },
+  "footer": {
+    "slogan": "Together, we care. Together, we inspire."
   }
 }
