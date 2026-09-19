@@ -25,14 +25,14 @@ collections:
               - { label: "Secondary Button Text", name: "secondary_button_text", widget: "string" }
               - { label: "Secondary Button Link", name: "secondary_button_link", widget: "string" }
 
-          - label: "About Initiative Cards"
+          - label: "Membership Perk Cards"
             name: "initiatives"
             widget: "list"
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
 
-          - label: "Initiative Details"
+          - label: "Membership Perk Details"
             name: "initiative_details"
             widget: "list"
             summary: "{{fields.title}}"
