@@ -14,6 +14,23 @@ collections:
         label: "Site Content"
         file: "content/site.json"
         fields:
+          - label: "Top Navigation"
+            name: "navigation"
+            widget: "list"
+            summary: "{{fields.label}} → {{fields.link}}"
+            fields:
+              - { label: "Menu Label", name: "label", widget: "string" }
+              - { label: "Section Link", name: "link", widget: "string", hint: "Examples: #about, #board, #events, #initiatives-detail, #involved, #signup" }
+
+          - label: "Google Sign-Up Form"
+            name: "signup_form"
+            widget: "object"
+            fields:
+              - { label: "Form Heading", name: "heading", widget: "string" }
+              - { label: "Form Description", name: "description", widget: "text" }
+              - { label: "Google Form Embed URL", name: "embed_url", widget: "string", hint: "The full Google Forms URL ending in viewform?embedded=true" }
+              - { label: "Public Form Link", name: "open_url", widget: "string", hint: "The public forms.gle responder link" }
+
           - label: "Homepage Hero"
             name: "hero"
             widget: "object"
