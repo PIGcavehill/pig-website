@@ -1,4 +1,32 @@
 {
+  "navigation": [
+    {
+      "label": "About",
+      "link": "#about"
+    },
+    {
+      "label": "Board",
+      "link": "#board"
+    },
+    {
+      "label": "Events",
+      "link": "#events"
+    },
+    {
+      "label": "Membership",
+      "link": "#initiatives-detail"
+    },
+    {
+      "label": "Sign Up",
+      "link": "#signup"
+    }
+  ],
+  "signup_form": {
+    "heading": "Membership sign-up form",
+    "description": "Open to students within the Faculty of Medical Sciences at UWI Cave Hill.",
+    "embed_url": "https://docs.google.com/forms/d/e/1FAIpQLSejssEUBijfI2n5K913zMuu0MipGC-4ra60QQpAxluYFX0cQQ/viewform?embedded=true",
+    "open_url": "https://forms.gle/jmwbT8SRwz3QCafDA"
+  },
   "contact": {
     "email": "pigcavehill@gmail.com",
     "instagram_handle": "@pigcavehill",
@@ -138,7 +166,7 @@
     "who_title": "Who can join?",
     "who_text": "All medical students at UWI Cave Hill. No experience needed, just a big heart and a willingness to learn.",
     "button_text": "Sign up today",
-    "button_link": "#contact"
+    "button_link": "#signup"
   },
   "board_intro": "The 2026–2027 executive board presents",
   "hero": {
