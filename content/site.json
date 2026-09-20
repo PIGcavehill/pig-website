@@ -78,6 +78,12 @@
   },
   "initiative_details": [
     {
+      "title": "Membership Details",
+      "description": "Register and pay a fee of $20 BDS (cash only) to any of the PIG board members. This covers your membership for one full academic year.",
+      "details": "Membership is only open to students within the Faculty of Medical Sciences. See contact details for any queries. ",
+      "image": "images/uploads/photo-2026-09-05-12-10-45-copy.jpg"
+    },
+    {
       "title": "A day in the life of a Paediatrician Programme",
       "description": "Shadow a Paediatrician for a day and see what Paediatrics is really all about. \n\nOpen to all paid members!",
       "details": "As a PAID P.I.G. member, you’ll have the opportunity to step out of the lecture theatre and shadow a practising Paediatrician for the day! \n\n- Experience Paediatrics firsthand\n- Observe real clinical practice\n- Learn directly from a Paediatrician\n- Gain early clinical exposure\n- See whether Paediatrics could be the specialty for you!\n",
@@ -108,12 +114,6 @@
       "image": "",
       "button_text": "",
       "button_link": ""
-    },
-    {
-      "title": "Membership Details",
-      "description": "Register and pay a fee of $20 BDS (cash only) to any of the PIG board members. This covers your membership for one full academic year.",
-      "details": "Membership is only open to students within the Faculty of Medical Sciences. See contact details for any queries. ",
-      "image": "images/uploads/photo-2026-09-05-12-10-45-copy.jpg"
     }
   ],
   "get_involved": {
