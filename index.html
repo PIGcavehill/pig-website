@@ -6,7 +6,6 @@
 <title>Paediatric Interest Group — UWI Cave Hill</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 <style>
   :root{
     --plum: #4E0F38;
@@ -163,10 +162,13 @@
   .contact-list .clabel{font-size:0.78rem;text-transform:uppercase;letter-spacing:.04em;color:var(--ink-soft);font-weight:700;}
   .contact-list a{text-decoration:none;font-weight:600;color:var(--plum);}
   .contact-form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;}
+  .contact-form h3{font-size:1.35rem;margin-bottom:8px;}
   .form-note{font-size:0.8rem;color:var(--ink-soft);margin-top:10px;}
-  .contact-soon{display:flex;flex-direction:column;justify-content:center;text-align:center;min-height:220px;}
-  .contact-soon h3{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--plum);margin-bottom:10px;}
-  .soon-badge{display:inline-block;align-self:center;font-size:0.75rem;font-weight:700;letter-spacing:.04em;color:#fff;background:var(--amber);padding:4px 14px;border-radius:20px;margin:0 0 14px;}
+  .google-form-frame{width:100%;height:760px;border:0;border-radius:10px;background:var(--blush);margin-top:18px;display:block;}
+  .form-open-link{margin-top:14px;text-align:center;}
+  .form-open-link a{color:var(--magenta-deep);font-weight:700;text-decoration:none;}
+  .form-open-link a:hover{text-decoration:underline;}
+  @media(max-width:780px){.google-form-frame{height:820px;}}
 
   footer{background:var(--plum);color:#ecd8e4;padding:44px 0 30px;}
   footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px;}
@@ -191,7 +193,7 @@
       <li><a href="#board">Board</a></li>
       <li><a href="#events">Events</a></li>
       <li><a href="#involved">Get Involved</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#signup">Sign Up</a></li>
     </ul>
   </nav>
 </header>
@@ -322,25 +324,32 @@
         <h3>Who can join?</h3>
         <p>All new medical students at UWI Cave Hill — no experience needed, just a big heart and a willingness to learn.</p>
       </div>
-      <a href="#contact" class="btn btn-primary">Sign up today</a>
+      <a href="#signup" class="btn btn-primary">Sign up today</a>
     </div>
   </div>
 </section>
 
-<section id="contact">
+<section id="signup">
   <div class="wrap">
     <div class="head">
-      <div class="eyebrow-line"><span class="rule"></span><span>Reach us</span></div>
-      <h2>Contact information</h2>
+      <div class="eyebrow-line"><span class="rule"></span><span>Join P.I.G.</span></div>
+      <h2>Sign up today</h2>
+      <p>Register your interest and stay updated on P.I.G. events, workshops and membership opportunities.</p>
     </div>
     <div class="contact-grid">
       <ul class="contact-list" id="contactList">
         <!-- filled by JS -->
       </ul>
-      <div class="contact-form contact-soon">
-        <h3>Contact form</h3>
-        <p class="soon-badge">Coming soon</p>
-        <p class="form-note">We're still setting this up. In the meantime, reach us directly by email, phone, or Instagram.</p>
+      <div class="contact-form">
+        <h3 id="signupFormHeading">Membership sign-up form</h3>
+        <p class="form-note" id="signupFormDescription">Open to students within the Faculty of Medical Sciences at UWI Cave Hill.</p>
+        <iframe
+          class="google-form-frame"
+          id="googleSignupForm"
+          title="P.I.G. Membership Sign-Up Google Form"
+          src="https://docs.google.com/forms/d/e/1FAIpQLSejssEUBijfI2n5K913zMuu0MipGC-4ra60QQpAxluYFX0cQQ/viewform?embedded=true"
+          loading="lazy">Loading…</iframe>
+        <p class="form-note form-open-link">Having trouble viewing the form? <a id="googleFormLink" href="https://forms.gle/jmwbT8SRwz3QCafDA" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
       </div>
     </div>
   </div>
@@ -357,7 +366,10 @@
   const navToggle = document.getElementById('navToggle');
   const navMenu = document.getElementById('navMenu');
   navToggle.addEventListener('click', () => navMenu.classList.toggle('open'));
-  navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMenu.classList.remove('open')));
+  function bindNavLinks() {
+    navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navMenu.classList.remove('open')));
+  }
+  bindNavLinks();
 
   document.querySelectorAll('.events-tabs button').forEach(btn => {
     btn.addEventListener('click', () => {
@@ -378,6 +390,15 @@
     .then(r => r.json())
     .then(data => {
       // Editable homepage sections
+      if (Array.isArray(data.navigation) && data.navigation.length) {
+        navMenu.innerHTML = data.navigation.map(item => '<li><a href="'+esc(item.link)+'">'+esc(item.label)+'</a></li>').join('');
+        bindNavLinks();
+      }
+      const sf = data.signup_form || {};
+      if (sf.heading) document.getElementById('signupFormHeading').textContent = sf.heading;
+      if (sf.description) document.getElementById('signupFormDescription').textContent = sf.description;
+      if (sf.embed_url) document.getElementById('googleSignupForm').src = sf.embed_url;
+      if (sf.open_url) document.getElementById('googleFormLink').href = sf.open_url;
       const h = data.hero || {};
       if (h.eyebrow) document.getElementById('heroEyebrow').textContent = h.eyebrow;
       if (h.headline) document.getElementById('heroHeadline').textContent = h.headline;
@@ -400,7 +421,7 @@
       if (data.board_intro) document.getElementById('boardIntro').textContent = data.board_intro;
       const gi = data.get_involved || {};
       if (gi.steps) document.getElementById('involvedSteps').innerHTML = gi.steps.map((item,i) => '<div class="step-card"><span class="step-mark">'+(i+1)+'.</span><h3>'+esc(item.title)+'</h3><p>'+esc(item.description)+'</p></div>').join('');
-      if (gi.who_title || gi.who_text) document.getElementById('whoStrip').innerHTML = '<div><h3>'+esc(gi.who_title||'Who can join?')+'</h3><p>'+esc(gi.who_text||'')+'</p></div><a href="'+esc(gi.button_link||'#contact')+'" class="btn btn-primary">'+esc(gi.button_text||'Sign up today')+'</a>';
+      if (gi.who_title || gi.who_text) document.getElementById('whoStrip').innerHTML = '<div><h3>'+esc(gi.who_title||'Who can join?')+'</h3><p>'+esc(gi.who_text||'')+'</p></div><a href="'+esc(gi.button_link||'#signup')+'" class="btn btn-primary">'+esc(gi.button_text||'Sign up today')+'</a>';
       if (data.footer && data.footer.slogan) document.getElementById('footerSlogan').textContent = data.footer.slogan;
 
       // Mission
@@ -481,15 +502,6 @@
       console.error('Could not load site content', err);
     });
 
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", user => {
-      if (!user) {
-        window.netlifyIdentity.on("login", () => {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
 </script>
 
 </body>
