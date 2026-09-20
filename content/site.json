@@ -123,16 +123,16 @@
   "get_involved": {
     "steps": [
       {
-        "title": "Follow & sign up",
-        "description": "Follow @pigcavehill on Instagram and fill out our sign-up form to join the mailing list."
+        "title": "Fill out the sign up form ",
+        "description": "You'll be added to our whatsapp group chat for first-hand updates on upcoming events"
       },
       {
-        "title": "Attend a session",
+        "title": "Become a paid member",
+        "description": "Enjoy all membership perks by becoming a paid member. Fee of $20 BDS (cash) to any of the board members. This covers membership for one full academic year"
+      },
+      {
+        "title": "Attend our sessions",
         "description": "Come to a workshop, camp, or outreach event — no paediatrics experience required."
-      },
-      {
-        "title": "Get involved further",
-        "description": "Volunteer at outreach events or step into a leadership role on the executive board."
       }
     ],
     "who_title": "Who can join?",
