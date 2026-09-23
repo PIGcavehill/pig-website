@@ -1,36 +1,4 @@
 {
-  "navigation": [
-    {
-      "label": "About",
-      "link": "#about"
-    },
-    {
-      "label": "Board",
-      "link": "#board"
-    },
-    {
-      "label": "Events",
-      "link": "#events"
-    },
-    {
-      "label": "Membership",
-      "link": "#initiatives-detail"
-    },
-    {
-      "label": "Get Involved",
-      "link": "#involved"
-    },
-    {
-      "label": "Sign Up",
-      "link": "#signup"
-    }
-  ],
-  "signup_form": {
-    "heading": "Membership sign-up form",
-    "description": "Open to students within the Faculty of Medical Sciences at UWI Cave Hill.",
-    "embed_url": "https://docs.google.com/forms/d/e/1FAIpQLSejssEUBijfI2n5K913zMuu0MipGC-4ra60QQpAxluYFX0cQQ/viewform?embedded=true",
-    "open_url": "https://forms.gle/jmwbT8SRwz3QCafDA"
-  },
   "contact": {
     "email": "pigcavehill@gmail.com",
     "instagram_handle": "@pigcavehill",
@@ -108,6 +76,12 @@
       "description": "To empower future physicians to become strong advocates for every child."
     }
   ],
+  "signup_form": {
+    "heading": "Membership sign-up form",
+    "description": "Open to students within the Faculty of Medical Sciences at UWI Cave Hill.",
+    "embed_url": "https://docs.google.com/forms/d/e/1FAIpQLSejssEUBijfI2n5K913zMuu0MipGC-4ra60QQpAxluYFX0cQQ/viewform?embedded=true",
+    "open_url": "https://forms.gle/jmwbT8SRwz3QCafDA"
+  },
   "mission": {
     "paragraph_1": "The Paediatric Interest Group (PIG) is a student-led organisation dedicated to fostering interest and excellence in paediatric medicine among medical students. We bridge the gap between theoretical knowledge and clinical practice through hands-on training, educational workshops, and community outreach focused on child health.",
     "paragraph_2": "PIG equips students with essential clinical skills, promotes patient-centred paediatric care, and creates opportunities for leadership, mentorship, and professional development; preparing students for clinical clerkships while making a meaningful impact in the community."
@@ -147,7 +121,7 @@
       "title": "Childcare Advocacy",
       "description": "Promoting the health, safety, and well-being of children through education, awareness, and community outreach. ",
       "details": "We aim to empower future physicians to become strong advocates for every child. Volunteer hours recorded for all paid members.",
-      "image": "images/uploads/photo-2026-09-05-12-10-45.jpg",
+      "image": "images/uploads/childhood-advocacy.jpeg",
       "button_text": "",
       "button_link": ""
     }
@@ -173,6 +147,32 @@
     "button_link": "#signup"
   },
   "board_intro": "The 2026–2027 executive board presents",
+  "navigation": [
+    {
+      "label": "About",
+      "link": "#about"
+    },
+    {
+      "label": "Board",
+      "link": "#board"
+    },
+    {
+      "label": "Events",
+      "link": "#events"
+    },
+    {
+      "label": "Membership",
+      "link": "#initiatives-detail"
+    },
+    {
+      "label": "Get Involved",
+      "link": "#involved"
+    },
+    {
+      "label": "Sign Up",
+      "link": "#signup"
+    }
+  ],
   "hero": {
     "eyebrow": "UWI Cave Hill Medical Sciences",
     "headline": "The future of healthcare starts with compassion",
