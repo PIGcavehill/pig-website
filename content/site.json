@@ -187,12 +187,6 @@
   },
   "upcoming_events": [
     {
-      "title": "Immunization Schedule Seminar",
-      "day": "Friday 9th",
-      "date_label": "October",
-      "description": "Starting junior clerkship soon? \nJoin us for an interactive seminar from 2:30-4:30pm in MTLC/ML. \nThis is designed to help you confidently navigate the childhood immunization schedule and apply it in a clinical setting. \n\n\n"
-    },
-    {
       "title": "Vital Signs Workshop",
       "date_label": "Date Soon",
       "description": "Think you know your vital signs? Paediatrics changes the rules! \n\nJoin us for an interactive workshop where you’ll learn how to measure and interpret key vital signs, understand how normal ranges change with age, and recognize when a reading should raise concern.\n\nMore details coming soon, follow @pigcavehill for updates.\n"
@@ -209,6 +203,12 @@
       "date_label": "Aug 2026",
       "day": "31",
       "description": "Coordinators involved: Mrs. Ward, Mrs. Hall, Ms. Bell, Ms. Mascoll.                                              \n\n\nA hands-on session giving members practical experience with blood draw technique. Building confidence through clinical skills practice."
+    },
+    {
+      "title": "Immunization Schedule Seminar",
+      "day": "9",
+      "date_label": "Oct 2026",
+      "description": "An interactive session with Dr. Soo Ping Chow to help the year 3 student prep for Junior Clerkship. Designed to help you confidently navigate the childhood immunization schedule and apply it in a clinical setting. "
     }
   ]
 }
