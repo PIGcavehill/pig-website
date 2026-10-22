@@ -30,6 +30,7 @@ collections:
               - { label: "Form Description", name: "description", widget: "text" }
               - { label: "Google Form Embed URL", name: "embed_url", widget: "string", hint: "The full Google Forms URL ending in viewform?embedded=true" }
               - { label: "Public Form Link", name: "open_url", widget: "string", hint: "The public forms.gle responder link" }
+              - { label: "Sign-Up Section Image", name: "image", widget: "image", required: false, hint: "Upload the photo to display above the membership sign-up form." }
 
           - label: "Homepage Hero"
             name: "hero"
