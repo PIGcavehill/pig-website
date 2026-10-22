@@ -81,7 +81,7 @@
     "description": "Open to students within the Faculty of Medical Sciences at UWI Cave Hill.",
     "embed_url": "https://docs.google.com/forms/d/e/1FAIpQLSejssEUBijfI2n5K913zMuu0MipGC-4ra60QQpAxluYFX0cQQ/viewform?embedded=true",
     "open_url": "https://forms.gle/jmwbT8SRwz3QCafDA",
-    "image": "images/uploads/photo-2026-09-05-12-10-45-copy.jpg"
+    "image": ""
   },
   "mission": {
     "paragraph_1": "The Paediatric Interest Group (PIG) is a student-led organisation dedicated to fostering interest and excellence in paediatric medicine among medical students. We bridge the gap between theoretical knowledge and clinical practice through hands-on training, educational workshops, and community outreach focused on child health.",
@@ -193,9 +193,9 @@
       "description": "Think you know your vital signs? Paediatrics changes the rules! \n\nJoin us for an interactive workshop where you’ll learn how to measure and interpret key vital signs, understand how normal ranges change with age, and recognize when a reading should raise concern.\n\nMore details coming soon, follow @pigcavehill for updates.\n"
     },
     {
-      "title": "Polyclinic Food Drive",
+      "title": "Polyclinic Give-Back Drive",
       "date_label": "Date soon",
-      "description": "A food drive supporting families at the polyclinic. \n\nMore details coming soon, follow @pigcavehill for updates."
+      "description": "Donate items and supporting patients and staff at local polyclinics\n\nMore details coming soon, follow @pigcavehill for updates."
     }
   ],
   "recent_events": [
