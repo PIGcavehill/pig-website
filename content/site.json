@@ -201,16 +201,16 @@
   ],
   "recent_events": [
     {
-      "title": "PIG Phlebotomy Workshop",
-      "date_label": "Aug 2026",
-      "day": "31",
-      "description": "Coordinators involved: Mrs. Ward, Mrs. Hall, Ms. Bell, Ms. Mascoll.                                              \n\n\nA hands-on session giving members practical experience with blood draw technique. Building confidence through clinical skills practice."
-    },
-    {
       "title": "Immunization Schedule Seminar",
       "day": "9",
       "date_label": "Oct 2026",
       "description": "An interactive session with Dr. Soo Ping Chow to help the year 3 students prep for Junior Clerkship. Designed to help confidently navigate the childhood immunization schedule and apply it in a clinical setting. "
+    },
+    {
+      "title": "PIG Phlebotomy Workshop",
+      "date_label": "Aug 2026",
+      "day": "31",
+      "description": "Coordinators involved: Mrs. Ward, Mrs. Hall, Ms. Bell, Ms. Mascoll.                                              \n\n\nA hands-on session giving members practical experience with blood draw technique. Building confidence through clinical skills practice."
     }
   ]
 }
