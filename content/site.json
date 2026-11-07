@@ -188,15 +188,15 @@
   },
   "upcoming_events": [
     {
-      "title": "Vital Signs Workshop",
-      "date_label": "Date Soon",
-      "description": "Think you know your vital signs? Paediatrics changes the rules! \n\nJoin us for an interactive workshop where you’ll learn how to measure and interpret key vital signs, understand how normal ranges change with age, and recognize when a reading should raise concern.\n\nMore details coming soon, follow @pigcavehill for updates.\n"
-    },
-    {
       "title": "Polyclinic Give-Back Drive",
       "date_label": "NOV 2026",
       "description": "Donate items and supporting patients and staff at local polyclinics\n\nMore details coming soon, follow @pigcavehill for updates.",
       "day": "6th- 20th"
+    },
+    {
+      "title": "Vital Signs Workshop",
+      "date_label": "Date Soon",
+      "description": "Think you know your vital signs? Paediatrics changes the rules! \n\nJoin us for an interactive workshop where you’ll learn how to measure and interpret key vital signs, understand how normal ranges change with age, and recognize when a reading should raise concern.\n\nMore details coming soon, follow @pigcavehill for updates.\n"
     }
   ],
   "recent_events": [
