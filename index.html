@@ -136,6 +136,7 @@
   .event-body p{color:var(--ink-soft);font-size:0.94rem;margin:0 0 8px;}
   .event-tag{display:inline-block;font-size:0.74rem;font-weight:700;letter-spacing:.03em;color:#fff;background:var(--amber);padding:3px 10px;border-radius:20px;}
   .event-tag.past{background:var(--ink-soft);}
+  .event-tag.in-progress{background:#229944;}
   .events-note{margin-top:26px;font-size:0.88rem;color:var(--ink-soft);}
   .initiative-detail-grid{display:flex;flex-direction:column;gap:28px;}
   .initiative-detail{scroll-margin-top:90px;display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:22px;padding:34px;box-shadow:0 10px 30px rgba(78,15,56,.055);position:relative;overflow:hidden;}
@@ -462,7 +463,7 @@
         <div class="event-row${e.title === 'Polyclinic Donation Drive' ? ' donation-drive' : ''}">
           <div class="event-date"><span class="day">${esc(e.day || 'TBA')}</span><span class="month">${esc(e.date_label)}</span></div>
           <div class="event-body">
-            <span class="event-tag">Upcoming</span>
+            <span class="event-tag${e.title === 'Polyclinic Donation Drive' ? ' in-progress' : ''}">${e.title === 'Polyclinic Donation Drive' ? 'In Progress' : 'Upcoming'}</span>
             <h3>${esc(e.title)}</h3>
             <p>${esc(e.description)}</p>
           </div>
