@@ -127,6 +127,11 @@
   .event-date{font-family:'Fraunces',serif;color:var(--magenta-deep);}
   .event-date .day{font-size:1.9rem;line-height:1;display:block;}
   .event-date .month{font-size:0.8rem;text-transform:uppercase;letter-spacing:.05em;color:var(--ink-soft);font-family:'Inter',sans-serif;font-weight:600;}
+  .event-row.donation-drive{grid-template-columns:130px 1fr;gap:22px;}
+  .donation-drive .event-date{border-right:2px solid var(--blush-2);padding-right:12px;}
+  .donation-drive .event-date .day{font-family:'Inter',sans-serif;font-size:1.45rem;font-weight:700;line-height:1.15;color:var(--magenta-deep);white-space:nowrap;}
+  .donation-drive .event-date .month{font-size:.9rem;letter-spacing:.25em;color:var(--ink);margin-top:7px;display:block;}
+  @media(max-width:600px){.event-row.donation-drive{grid-template-columns:1fr}.donation-drive .event-date{border-right:0;border-bottom:2px solid var(--blush-2);padding-bottom:10px;}}
   .event-body h3{font-size:1.08rem;margin-bottom:6px;}
   .event-body p{color:var(--ink-soft);font-size:0.94rem;margin:0 0 8px;}
   .event-tag{display:inline-block;font-size:0.74rem;font-weight:700;letter-spacing:.03em;color:#fff;background:var(--amber);padding:3px 10px;border-radius:20px;}
@@ -454,7 +459,7 @@
       // Events
       const upcoming = document.getElementById('upcoming');
       upcoming.innerHTML = (data.upcoming_events || []).map(e => `
-        <div class="event-row">
+        <div class="event-row${e.title === 'Polyclinic Donation Drive' ? ' donation-drive' : ''}">
           <div class="event-date"><span class="day">${esc(e.day || 'TBA')}</span><span class="month">${esc(e.date_label)}</span></div>
           <div class="event-body">
             <span class="event-tag">Upcoming</span>
